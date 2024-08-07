@@ -1,0 +1,419 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.scheduled-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-weight: 700;
+    font-size: 50px;
+    padding: 4rem;
+}
+.line{
+    height: 2px;
+    width: 30vmin;
+    margin-left: 2rem;
+    background-color: grey;
+}
+button{
+    color: white;
+    background-color: blue;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Progress Bar Styling */
+.circle{
+    border: 1px solid gray;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    position: relative;
+}
+.check{
+    position: absolute;
+    background-color: blue;
+    color: white;
+    font-size: 22px;
+    left: 0;
+    top: -2px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.pItem{
+    display: flex;
+    align-items: center;
+}
+.progressbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
+    padding: 1rem 10rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+.progress{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar{
+    width: 30%;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 5vmin;
+}
+.card{
+    border: 1px solid rgb(199, 198, 198); 
+    border-radius: 0.5rem;
+    display: flex;
+    align-items:flex-start;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+}
+.card.active {
+    border: 1px solid blue;
+  }
+  
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.greybox{
+    height: 70px;
+    width: 70px;
+    border-radius: 0.5rem;
+    background-color: rgb(207, 206, 206);
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+.card.active .greybox{
+    background-color: rgb(159, 214, 246);
+}
+
+/* Main Box Styling */
+.mainbox-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+.mainbox{
+    width: 100%;
+}
+
+/* Content Box Styling */
+.contentbox-wrapper{
+    background-color: rgb(223, 223, 223);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    margin-left: 65vmin;
+    margin-top: 7.5vmin;
+}
+.content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*Description Box Styling*/
+.descbox-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(159, 214, 246);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.descbox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+}
+.descbox .provide{
+    margin-top: 1rem;
+}
+
+/*Documents Box Styling*/
+.documents-wrapper{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.list input{
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+    outline: none;
+}
+/*Purpose Box Styling*/
+.purpose-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    padding: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.purposes{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.purposes input{
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+    outline: none;
+}
+
+/*Availability Box Styling*/
+.availwrapper{
+    background-color: white;
+    width: 100%;
+    padding: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.avail-field{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.avail-field input{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+    outline: none;
+}
+.avail-field select{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+    outline: none;
+}
+
+/*Details Styling*/
+.details-wrapper{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.details-wrapper .fields{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.details-wrapper .fields input{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+    outline: none;
+}
+
+@media (max-width:799px){
+    .line{
+        width:0;
+    }
+    
+    .progressbar{
+        padding: 1rem 0.2rem;
+    }
+    .progress p{
+        font-size: 12px;
+        text-align: center;
+    }
+    .pItem{
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 30%;
+        height: 100vh;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        left: 0;
+        top: 12vmin;
+    }
+     .hide-intro{
+        display: none;
+     } 
+    .info p{
+        display: none;
+    }
+    .greybox{
+        display: none;
+    }
+    
+    .contentbox-wrapper{
+        margin-left: 35vmin;
+        margin-top: 12vmin;
+    }
+    .content{
+        width: 90%;
+    }
+    
+    .descbox p{
+        display: none;
+    }
+    
+    /*Documents Box Styling*/
+    .documents-wrapper{
+        width: 100%;
+        padding-left: 0rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+    .list input{
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        border: 1px solid grey;
+        outline: none;
+        width: 100%;
+    }
+    /*Purpose Box Styling*/
+    .purpose-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        width: 100%;
+        padding: 2rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .purposes{
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .purposes input{
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0.3rem;
+        border: 1px solid grey;
+        outline: none;
+    }
+    
+    /*Availability Box Styling*/
+    .availwrapper{
+        background-color: white;
+        width: 100%;
+        padding: 2rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .avail-field{
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .avail-field input{
+        padding: 0.5rem 1rem;
+        width: 100%;
+        border-radius: 0.3rem;
+        border: 1px solid grey;
+        outline: none;
+    }
+    .avail-field select{
+        padding: 0.5rem 1rem;
+        width: 100%;
+        border-radius: 0.3rem;
+        border: 1px solid grey;
+        outline: none;
+    }
+    
+    /*Details Styling*/
+    .details-wrapper{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        padding: 2rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    .details-wrapper .fields{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+    .details-wrapper .fields input{
+        padding: 0.5rem 1rem;
+        width: 100%;
+        border-radius: 0.3rem;
+        border: 1px solid grey;
+        outline: none;
+    }
+    
+    
+}
